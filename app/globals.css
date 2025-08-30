@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100% / 0.4;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --primary: 199 89% 58%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 187 92% 56%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 199 89% 58%;
+}
+
+.dark {
+  --background: 222.2 47.4% 11.2%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 47.4% 13% / 0.45;
+  --card-foreground: 210 40% 98%;
+  --primary: 199 89% 58%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 187 92% 56%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 199 89% 58%;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.glass {
+  @apply bg-card backdrop-blur-md border border-border/60 shadow-glass;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+a {
+  @apply underline-offset-4 hover:underline;
+}
+
+img, video {
+  @apply rounded-2xl;
+}
